@@ -365,8 +365,8 @@
             <div class="section">
                 <div class="section-title">
                     🖼️ 4단계: 저장된 이미지 갤러리
-                    <button class="btn-secondary" style="margin-left: auto; min-width: 120px;" onclick="loadImages()">
-                        🔄 새로고침
+                    <button class="btn-secondary" style="margin-left: auto; min-width: 120px;" onclick="initImages()">
+                        🔄 초기화
                     </button>
                 </div>
                 <div id="imageGallery" class="image-gallery">
@@ -680,6 +680,9 @@
         // ============================================
         // 9. 초기화
         // ============================================
+        function initImages() {
+            localStorage.clear();
+        }
         window.addEventListener('load', () => {
             loadImages();
             console.log('🚀 시스템 초기화 완료');
